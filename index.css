@@ -5,22 +5,20 @@
 }
 body {
   width: 100%;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
 }
 picture {
-  width: 480px;
-  height: 160px;
+  width: 520px;
+  height: 325px;
   position: absolute;
-  left: calc(50% - 240px);
-  top: calc(50% - 80px);
+  left: calc(50% - 260px);
+  top: calc(50% - 162px);
 }
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: black;
-  color: white;
   text-align: center;
 }
 h1,
@@ -32,7 +30,8 @@ a {
 }
 a {
   display: block;
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 8px;
+  font-weight: bold;
 }
