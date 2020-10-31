@@ -3,46 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:54333/contact/</loc>
+    <loc>http://localhost:60487/contact/</loc>
     <lastmod>2020-10-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:54333/about/</loc>
+    <loc>http://localhost:60487/about/</loc>
     <lastmod>2020-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:54333/gallery/</loc>
+    <loc>http://localhost:60487/gallery/</loc>
     <lastmod>2020-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:54333/posts/new-logo/</loc>
+    <loc>http://localhost:60487/posts/new-logo/</loc>
     <lastmod>2020-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:54333/</loc>
+    <loc>http://localhost:60487/</loc>
     <lastmod>2020-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:54333/wedding-bouquets/</loc>
+    <loc>http://localhost:60487/wedding-bouquets/</loc>
     <lastmod>2020-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:54333/posts/</loc>
+    <loc>http://localhost:60487/posts/</loc>
     <lastmod>2017-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:54333/categories/</loc>
+    <loc>http://localhost:60487/categories/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:54333/tags/</loc>
+    <loc>http://localhost:60487/tags/</loc>
   </url>
   
 </urlset>
