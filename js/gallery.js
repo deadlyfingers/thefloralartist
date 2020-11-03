@@ -15,7 +15,6 @@
     },
     {threshold: 0.1});
     const targets = document.querySelectorAll("img", "#gallery");
-    console.log(targets);
     for (target of targets) {
       observer.observe(target);
     };
