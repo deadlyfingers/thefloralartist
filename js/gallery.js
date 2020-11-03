@@ -4,6 +4,24 @@
   var _imgURL = app.imgURL;
   var _accessControlAllowOrigin = app.storageAccessControlAllowOrigin;
 
+  // lazy load gallery images
+  function lazyLoadImages() {
+    const observer = new IntersectionObserver((entries, observer) => {
+      for (entry of entries) {
+        if (entry.isIntersecting && !entry.target.getAttribute('src')) {
+          entry.target.setAttribute('src',  entry.target.getAttribute('data-src'));
+        }
+      }
+    },
+    {threshold: 0.1});
+    const targets = document.querySelectorAll("img", "#gallery");
+    console.log(targets);
+    for (target of targets) {
+      observer.observe(target);
+    };
+  }
+
+  // add gallery images
   function generate(images, imgURL) {
     var gallery = document.getElementById('gallery');
     var row = document.createElement("div");
@@ -18,13 +36,15 @@
       a.setAttribute('data-fslightbox', 'gallery');
       a.className = "col-xs-12 col-sm-6 col-md-4 col-lg-3";
       var img = document.createElement("img");
-      img.src = imgURL + filename;
+      // img.src = imgURL + filename;
+      img.setAttribute('data-src', imgURL + filename);
       img.alt = filename;
       a.appendChild(img);
       row.appendChild(a);
       i++;
     }
     gallery.appendChild(row);
+    lazyLoadImages();
     refreshFsLightbox();
   }
 
