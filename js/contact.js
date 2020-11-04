@@ -22,15 +22,15 @@
     })
     .then(
       function(response) {
-        if (response.status !== 200) {
+        if (response.status === 200 || response.status === 202) {
+          response.text().then(function(data) {
+            showMessage(data);
+          });
+        } else {
           showMessage('Oops there was a problem. Status Code: ' +
           response.status);
           return;
         }
-
-        response.text().then(function(data) {
-          showMessage(data);
-        });
       }
     )
     .catch(function(err) {
