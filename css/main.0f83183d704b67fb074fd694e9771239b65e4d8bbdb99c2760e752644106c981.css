@@ -873,10 +873,46 @@ h1 {
 P {
   line-height: 200%; }
 
-.gallery img {
-  object-fit: cover;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(40px); }
+  100% {
+    opacity: 1;
+    filter: none; } }
+
+.grid {
+  display: grid;
+  grid-gap: 1px 1px;
+  grid-template-columns: auto auto auto; }
+
+.gallery {
+  margin: 1px; }
+
+.gallery a {
+  display: block;
+  position: relative;
   width: 100%;
-  min-height: 400px; }
+  border: 2px solid white;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0; }
+
+.gallery img {
+  display: block;
+  width: 100%;
+  min-height: 460px;
+  object-fit: cover;
+  box-sizing: border-box; }
+
+.gallery a > img:nth-child(2n) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation: fadeIn ease 1s;
+  animation-fill-mode: forwards; }
 
 .hero {
   color: black;
@@ -940,8 +976,9 @@ P {
 .frame.animate .one {
   position: absolute;
   width: 284px;
-  height: 400px;
+  height: 398px;
   background: url("/images/bridal_bouquet.jpg");
+  background-repeat: no-repeat;
   right: 0;
   top: 0px;
   animation-name: one;
