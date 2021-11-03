@@ -815,9 +815,10 @@ body {
   margin-bottom: 2em; }
 
 .profile {
-  background-image: url("/images/grace_killen.jpg");
-  background-size: cover;
+  background-image: url("/images/grace-wedding-bouquet-painting-ireland-1.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   padding-bottom: 100%; }
 
@@ -833,10 +834,9 @@ nav {
   background: white;
   color: black; }
   nav ul {
-    width: 100%;
     height: 50px;
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0; }
     nav ul li {
       float: left; }
@@ -867,8 +867,18 @@ nav {
     outline: none;
     cursor: pointer; }
 
-h1 {
-  font-family: "atb-script", cursive; }
+h1, .display {
+  font-family: "atb-script", cursive;
+  text-align: center; }
+
+.extract {
+  text-align: center; }
+
+.display > a {
+  text-decoration: none; }
+
+.posts li {
+  list-style-type: none; }
 
 P {
   line-height: 200%; }
@@ -898,7 +908,7 @@ P {
   overflow: hidden;
   padding: 0; }
 
-.gallery img {
+.gallery img, .post img {
   display: block;
   width: 100%;
   min-height: 460px;
@@ -1026,11 +1036,35 @@ input[type=submit] {
   font-family: "atb-serif", serif;
   font-weight: bolder; }
 
-@media only screen and (max-width: 590px) {
+ul.tags, ul.categories {
+  padding-inline-start: 0; }
+  ul.tags li, ul.categories li {
+    list-style-type: none;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px; }
+    ul.tags li a, ul.categories li a {
+      display: block;
+      background-color: #ccc;
+      border-radius: 5px;
+      padding: 5px;
+      text-decoration: none; }
+
+ul.categories li a {
+  background-color: black;
+  color: white; }
+
+.posts .display {
+  text-align: left; }
+
+img.posts {
+  width: 100%; }
+
+@media only screen and (max-width: 690px) {
   nav ul li.menu {
     display: none; } }
 
-@media only screen and (min-width: 590px) {
+@media only screen and (min-width: 690px) {
   nav #toggleMenu {
     display: none; } }
 
@@ -1064,8 +1098,7 @@ input[type=submit] {
             padding: 0; }
         body.modal nav ul .home {
           width: 100%;
-          margin: 0;
-          margin-top: 50px; } }
+          margin: 0; } }
 
 @media only screen and (min-width: 520px) {
   .hero {
